@@ -1,0 +1,25 @@
+.example-container {
+  position: absolute;
+  top: 62px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.collapse-icon {
+  background: transparent;
+  border: none;
+  color: white;
+}
+
+mat-sidenav {
+  width: 300px;
+}
+
+mat-sidenav-content {
+  padding: 25px;
+}
+
+mat-action-list {
+  padding-top:0px;
+}
