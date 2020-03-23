@@ -16,10 +16,43 @@ mat-sidenav {
   width: 300px;
 }
 
+.sidenav-link {
+  text-align:center;
+}
+
 mat-sidenav-content {
   padding: 25px;
 }
 
 mat-action-list {
   padding-top:0px;
+}
+
+.mat-list-base .mat-list-item {
+  text-decoration: none;
+}
+
+mat-list-option[aria-selected="true"] {
+  background: silver;
+}
+
+.mat-toolbar.mat-primary {
+  background: #193f68;
+  color: #fff;
+}
+
+.banner-img {
+  height:50%;
+}
+
+@media (min-width: 1281px) {
+  .collapse-icon {
+    display: none;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .collapse-icon {
+    display: none;
+  }
 }

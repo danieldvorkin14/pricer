@@ -1,10 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import {MatSort} from '@angular/material/sort';
+import {MatTableDataSource} from '@angular/material/table';
 
 export interface PeriodicElement {
   name: string;
   position: number;
   weight: number;
   symbol: string;
+}
+
+interface Type {
+  value: string;
+  viewValue: string;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
@@ -28,13 +35,27 @@ const ELEMENT_DATA: PeriodicElement[] = [
 
 export class DashboardComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
-  
-  constructor() {   
-    
-  }
+  dataSource = new MatTableDataSource(ELEMENT_DATA);
 
-  ngOnInit(): void {
-  }
+  @ViewChild(MatSort, {static: true}) sort: MatSort;
 
+  selectedValue: string;
+
+  types: Type[] = [
+    {value: 'mine-0', viewValue: 'Mine'},
+    {value: 'others-1', viewValue: 'Other'},
+    {value: 'all-2', viewValue: 'All'},
+    {value: 'price-exp-3', viewValue: 'PriceExp'},
+    {value: 'spec-exp-4', viewValue: 'SpecExp'},
+    {value: 'project-5', viewValue: 'Project'},
+    {value: 'central-6', viewValue: 'Central'},
+    {value: 'pricing-7', viewValue: 'Pricing'},
+    {value: 'wip-8', viewValue: 'WIP'}
+  ];
+
+  constructor() { }
+
+  ngOnInit(){
+    this.dataSource.sort = this.sort;
+  }
 }

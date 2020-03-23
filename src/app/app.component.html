@@ -1,24 +1,20 @@
 <mat-toolbar color="primary">
   <button mat-icon-button class="collapse-icon" (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
-  <span>CREATE - Pricer</span>
+  <img class="img-fluid banner-img" src="assets/banner.png">
 </mat-toolbar>
 
 <mat-sidenav-container class="example-container">
-  <mat-sidenav #sidenav mode="side" [opened]="true" (opened)="events.push('open!')" (closed)="events.push('close!')">
+  <mat-sidenav #sidenav mode="side" [opened]="true">
     <mat-action-list>
-      <button mat-list-item> Manufacturer Inbox </button>
-      <button mat-list-item> My Requests </button>
-      <button mat-list-item> Other Requests </button>
-      <button mat-list-item> Dashboard </button>
-      <button mat-list-item> Communication </button>
+      <a mat-list-item [routerLink]="['/manufacturer_inbox']"> Manufacturer Inbox </a>
+      <a mat-list-item [routerLink]="['/my_requests']"> My Requests </a>
+      <a mat-list-item> Other Requests </a>
+      <a mat-list-item [routerLink]="['/dashboard']"> Dashboard </a> 
+      <a mat-list-item href=""> Communication </a>
     </mat-action-list>
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <mat-grid-list cols="4" rowHeight="100px">
-      <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
-        {{tile.text}}
-      </mat-grid-tile>
-    </mat-grid-list>    
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
