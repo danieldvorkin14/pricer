@@ -26,13 +26,15 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { RequestListComponent } from './components/request-list/request-list.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ManufacturerInboxComponent } from './components/manufacturer-inbox/manufacturer-inbox.component';
+import { OtherRequestListComponent } from './components/other-request-list/other-request-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     RequestListComponent,
-    ManufacturerInboxComponent
+    ManufacturerInboxComponent,
+    OtherRequestListComponent
   ],
   imports: [
     BrowserModule,
