@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./request-list.component.scss']
 })
 export class RequestListComponent implements OnInit {
+  headerName: string;
 
-  constructor() { }
+  constructor() {
+    
+  }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    
   }
 
 }
