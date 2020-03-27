@@ -45,6 +45,11 @@ mat-list-option[aria-selected="true"] {
   height:50%;
 }
 
+
+.mat-tab-body-content {
+  overflow-x: hidden !important;
+}
+
 @media (min-width: 1281px) {
   .collapse-icon {
     display: none;

@@ -21,6 +21,12 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatCardModule } from '@angular/material/card';
+
+//bootstrap
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 // Components
 import { RequestListComponent } from './components/request-list/request-list.component';
@@ -55,7 +61,11 @@ import { OtherRequestListComponent } from './components/other-request-list/other
     MatRippleModule,
     MatInputModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    MatExpansionModule,
+    MatTabsModule,
+    MatCardModule,
+    NgbModule
   ],
   providers: [
     MatDatepickerModule,
