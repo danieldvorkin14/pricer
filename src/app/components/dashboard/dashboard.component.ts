@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import {MatSort} from '@angular/material/sort';
-import {MatTableDataSource} from '@angular/material/table';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
+import { Chart } from 'angular-highcharts';
 
 export interface PeriodicElement {
   name: string;
@@ -52,6 +53,26 @@ export class DashboardComponent implements OnInit {
     {value: 'pricing-7', viewValue: 'Pricing'},
     {value: 'wip-8', viewValue: 'WIP'}
   ];
+
+  chart1 = new Chart({
+    chart: {
+      type: 'line',
+      height: '400px'
+    },
+    title: { text: 'Chart 1' },
+    credits: { enabled: false },
+    series: [
+      {
+        name: 'Line 1',
+        data: [1, 2, 3],
+        type: undefined
+      }
+    ]
+  });
+
+  add(chart){
+    this[chart].addPoint(Math.floor(Math.random() * 10));
+  }
 
   constructor() { }
 

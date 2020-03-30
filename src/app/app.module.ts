@@ -28,6 +28,9 @@ import { MatCardModule } from '@angular/material/card';
 //bootstrap
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+// HighCharts
+import { ChartModule } from 'angular-highcharts';
+
 // Components
 import { RequestListComponent } from './components/request-list/request-list.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -65,7 +68,8 @@ import { OtherRequestListComponent } from './components/other-request-list/other
     MatExpansionModule,
     MatTabsModule,
     MatCardModule,
-    NgbModule
+    NgbModule,
+    ChartModule
   ],
   providers: [
     MatDatepickerModule,

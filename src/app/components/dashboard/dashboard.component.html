@@ -13,9 +13,14 @@
               <mat-expansion-panel-header>
                 Panel Title 1
               </mat-expansion-panel-header>
+              
+              <p>Graph Description</p>
               <mat-panel-description>
-                Panel Content
+                <div [chart]="chart1"></div>
               </mat-panel-description>
+
+              <button (click)="add('chart1')">Add Point!</button> 
+
             </mat-expansion-panel>
           </div>
 
